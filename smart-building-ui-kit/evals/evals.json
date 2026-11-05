@@ -1,0 +1,23 @@
+{
+  "skill_name": "smart-building-ui-kit",
+  "evals": [
+    {
+      "id": 1,
+      "name": "icon-set-from-scratch",
+      "prompt": "幫我做一套中控系統要用的圖示，深色面板用。要這些：門口機、半球攝影機、門禁讀卡機、車道閘門、電梯、消防、空調、電表、樓層平面圖。",
+      "expected_output": "9 顆 SVG（檔名 <domain>-<name>.svg、viewBox 0 0 24 24、線寬統一 2、無寫死顏色）+ tokens.css + preview.html + manifest.json + 多尺寸 PNG"
+    },
+    {
+      "id": 2,
+      "name": "extend-and-lint-existing-set",
+      "prompt": "客戶給了一批圖示（在 icons/），要補三顆：新風機、水位計、充電樁。順便幫我看原本那批有沒有問題。",
+      "expected_output": "3 顆新 SVG 符合規格；能逐條指出既有 elevator_final2.svg 的問題（檔名、viewBox、寫死顏色、用 <text>、幾何超界）"
+    },
+    {
+      "id": 3,
+      "name": "dashboard-hero-background",
+      "prompt": "幫我生一張中控大屏的主視覺背景圖，1920x1080，深色科技感，左邊要留空放 KPI 卡。",
+      "expected_output": "backgrounds/ 內有生成原圖 + 裁好的 1920x1080 PNG（已去浮水印）+ prompts.md 記錄完整 prompt"
+    }
+  ]
+}

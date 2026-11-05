@@ -1,0 +1,15 @@
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+     stroke-linecap="round" stroke-linejoin="round"
+     xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <!--
+    智慧建築圖示起手模板
+    · 畫布 24×24，內容留在 2～22（留 2px 邊距）
+    · 線條一律 currentColor（不要寫死 #hex，否則換不了狀態色）
+    · 全部同一條 stroke-width=2，線端與接角 round
+    · 點綴元素加 class="accent" 並用 var(--icon-accent, …)，
+      沒給變數時會自動退回主色，所以可以放心標
+    · 一檔一圖示，檔名 <domain>-<name>.svg
+  -->
+  <rect x="3" y="3" width="18" height="18" rx="2"/>
+  <circle class="accent" cx="12" cy="12" r="3" stroke="var(--icon-accent, currentColor)"/>
+</svg>
