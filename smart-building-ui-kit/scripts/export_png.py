@@ -111,6 +111,7 @@ def screenshot_html(
     tmp = Path(tempfile.mkdtemp(prefix="svgshot-"))
     page = tmp / "page.html"
     page.write_text(html, encoding="utf-8")
+    out = out.resolve()
     if out.exists():
         out.unlink()
     cmd = [
@@ -122,7 +123,10 @@ def screenshot_html(
         f"--screenshot={out}",
         page.as_uri(),
     ]
-    subprocess.run(cmd, capture_output=True, timeout=180)
+    subprocess.run(
+        cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+        timeout=180, check=True,
+    )
     for _ in range(80):                     # 等瀏覽器把檔案寫完
         if out.exists() and out.stat().st_size > 0:
             return
